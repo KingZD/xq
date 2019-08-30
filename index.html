@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/qp.css">
+		</link>
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="js/zgxq.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var canvas = document.getElementById("mCanvas");
+				loadRes(canvas)
+				var scrollWidth = canvas.offsetWidth;
+				var scrollHeight = canvas.offsetHeight;
+				var scrollTop = canvas.offsetTop;
+				var scrollLeft = canvas.offsetLeft;
+				var div = document.getElementById("div");
+				div.innerHTML += "XQ WH:" + xqWH + "<br />";
+				div.innerHTML += "XQWord WH:" + xqWordWH + "<br />";
+				div.innerHTML += "canvas wordWidth:" + wordWidth + "<br />";
+				div.innerHTML += "canvas cellWH: " + cellWH + "<br />";
+				div.innerHTML += "canvas height:" + canvasHeight + "<br />";
+				div.innerHTML += "scrollWidth:" + scrollWidth + "<br />";
+				div.innerHTML += "scrollHeigth:" + scrollHeight + "<br />";
+				div.innerHTML += "scrollTop:" + scrollTop + "<br />";
+				div.innerHTML += "scrollLeft:" + scrollLeft + "<br />";
+			})
+		</script>
+	</head>
+	<body>
+		<div style="border: 1px solid #333;width:auto;display:inline-block;">
+			<canvas id="mCanvas" width="200px" height="400px" style="display:block;margin: 10px;">
+				不支持canvas
+			</canvas>
+		</div>
+		<div id="div" style="font-family: 'MyFont'"></div>
+	</body>
+</html>
